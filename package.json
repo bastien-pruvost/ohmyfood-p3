@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood-p3",
+  "version": "1.0.0",
+  "description": "Third project for Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/scss/:./styles/css/ --style expanded --no-source-map",
+    "prefix": "postcss ./styles/css/ --use autoprefixer -d ./styles/prefixed-css/ --no-map",
+    "autoprefix": "onchange \"./styles/css/*.css\" -- npm run prefix"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "defaults",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.10"
+  }
+}
