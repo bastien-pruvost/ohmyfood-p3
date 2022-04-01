@@ -8,19 +8,27 @@ $colorIcons: #7e7e7e;
 $greyDark: #353535;
 $greyMedium: #eaeaea;
 $greyLight: #f6f6f6;
-
 $white: #ffffff;
 
-$colorBgBtn: linear-gradient(
-  90deg,
-  $colorPrimary 0%,
-  $colorSecondary 100%
+// --- Gradients ---
+$gradientBgBtn: linear-gradient(
+  -3deg,
+  $colorPrimary 5%,
+  $colorSecondary 115%
 );
 
-// $colorBgBtnHover: lighten($colorBgBtn);
+$gradientBgBtnHover: linear-gradient(
+  -3deg,
+  lighten($colorPrimary, 4.5%) 0%,
+  lighten($colorSecondary, 4%) 100%
+);
+
+// --- Fonts ---
+$fontHeading: 'Shrikhand', cursive;
+$fontBody: 'Roboto', sans-serif;
 
 // --- Media Queries BreakPoints ---
 $breakpoints: (
-  tablet: 600px,
+  tablet: 800px,
   laptop: 900px,
 );

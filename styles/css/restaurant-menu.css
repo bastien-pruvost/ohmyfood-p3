@@ -1,17 +1,328 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 12 | @import './layout/forms';
- *    |         ^^^^^^^^^^^^^^^^
- *    '
- *   styles\scss\restaurant-menu.scss 12:9  root stylesheet */
+html {
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+body {
+  margin: 0;
+}
+
+main {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 12 \2502  @import './layout/forms';\d\a    \2502          ^^^^^^^^^^^^^^^^\a    \2575 \a   styles\\scss\\restaurant-menu.scss 12:9  root stylesheet";
+}
+
+h1 {
+  font-size: 2em;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.location {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #353535;
+}
+
+.functioning-step__text {
+  font-weight: 600;
+}
+
+.restaurant-card__desc span {
+  font-size: 1.1rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 25px;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  color: #ffffff;
+  border-radius: 100px;
+  background-image: linear-gradient(-3deg, #9356dc 5%, #ff79fa 115%);
+  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.25);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-image: linear-gradient(-3deg, #9f69e0 0%, #ff8dfb 100%);
+  box-shadow: 1px 4px 10px -3px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+
+.heart-svg-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.heart-svg-active {
+  fill: url("#gradient-1");
+  stroke: url("#gradient-1");
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.heart-svg-inactive {
+  fill: none;
+  stroke: #010101;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+.header__logo {
+  margin: 15px 0 10px;
 }

@@ -24,22 +24,21 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <!-- <img src="./images/logo/ohmyfood-logo.svg" alt="Logo OhMyFood"> -->
-    <h1>ohmyfood</h1>
+    <h1 class="header__logo">ohmyfood</h1>
   </header>
 
   <main>
     <section class="location">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Paris, Belleville</span>
+      <span><i class="fas fa-map-marker-alt"></i>Paris, Belleville</span>
     </section>
 
     <div class="hero">
       <section class="presentation">
         <div class="wrapper">
-          <h2>Réservez le menu qui vous convient</h2>
-          <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+          <h2>Réservez le menu qui<br>vous convient</h2>
+          <p>Découvrez des restaurants d'exception,<br>séléctionnés par nos soins.</p>
           <a href="#restaurants" class="btn">Explorer nos restaurants</a>
         </div>
       </section>
@@ -59,13 +58,13 @@
             <li class="functioning-step">
               <span class="functioning-step__number">2</span>
               <i class="fas fa-list-ul functioning-step__icon"></i>
-              <span class="functioning-step__text">Choisissez un restaurant</span>
+              <span class="functioning-step__text">Composez votre menu</span>
             </li>
 
             <li class="functioning-step">
               <span class="functioning-step__number">3</span>
               <i class="fas fa-store functioning-step__icon"></i>
-              <span class="functioning-step__text">Choisissez un restaurant</span>
+              <span class="functioning-step__text">Dégustez au restaurant</span>
             </li>
           </ul>
 
@@ -73,8 +72,133 @@
       </section>
     </div>
 
-    <section class="restaurants">
+    <section class="restaurants" id="restaurants">
+      <div class="wrapper">
 
+        <h2>Restaurants</h2>
+        <div class="restaurants-grid">
+
+          <a href="./restaurant-la-palette-du-gout.html" class="restaurant-card">
+            <div class="restaurant-card__img">
+              <img src="./images/restaurants/la-palette-du-gout.jpg" alt="">
+              <span>Nouveau</span>
+            </div>
+            <div class="restaurant-card__desc">
+              <div class="desc-left">
+                <h3>La palette du goût</h3>
+                <span>Ménilmontant</span>
+              </div>
+              <input id="check-like-1" type="checkbox" class="check-like">
+              <label for="check-like-1">
+                <div class="heart-svg-container">
+                  <svg class="heart-svg-active" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                    <defs>
+                      <linearGradient id="gradient-1" x1="35%" y1="100%" x2="80%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF79DA" />
+                        <stop offset="100%" style="stop-color:#9356DC" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <svg class="heart-svg-inactive" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                  </svg>
+                </div>
+              </label>
+            </div>
+          </a>
+
+          <div class="restaurant-card">
+            <div class="restaurant-card__img">
+              <img src="./images/restaurants/la-note-enchantée.jpg" alt="">
+              <span>Nouveau</span>
+            </div>
+            <div class="restaurant-card__desc">
+              <div class="desc-left">
+                <h3>La note enchantée</h3>
+                <span>Charonne</span>
+              </div>
+              <input id="check-like-2" type="checkbox" class="check-like" checked>
+              <label for="check-like-2">
+                <div class="heart-svg-container">
+                  <svg class="heart-svg-active" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                    <defs>
+                      <linearGradient id="gradient-1" x1="35%" y1="100%" x2="80%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF79DA" />
+                        <stop offset="100%" style="stop-color:#9356DC" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <svg class="heart-svg-inactive" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                  </svg>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="restaurant-card">
+            <div class="restaurant-card__img">
+              <img src="./images/restaurants/a-la-francaise.jpg" alt="">
+            </div>
+            <div class="restaurant-card__desc">
+              <div class="desc-left">
+                <h3>A la française</h3>
+                <span>Cité Rouge</span>
+              </div>
+              <input id="check-like-3" type="checkbox" class="check-like">
+              <label for="check-like-3">
+                <div class="heart-svg-container">
+                  <svg class="heart-svg-active" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                    <defs>
+                      <linearGradient id="gradient-1" x1="35%" y1="100%" x2="80%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF79DA" />
+                        <stop offset="100%" style="stop-color:#9356DC" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <svg class="heart-svg-inactive" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                  </svg>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="restaurant-card">
+            <div class="restaurant-card__img">
+              <img src="./images/restaurants/le-delice-des-sens.jpg" alt="">
+            </div>
+            <div class="restaurant-card__desc">
+              <div class="desc-left">
+                <h3>Le délice des sens</h3>
+                <span>Folie-Méricourt</span>
+              </div>
+              <input id="check-like-4" type="checkbox" class="check-like">
+              <label for="check-like-4">
+                <div class="heart-svg-container">
+                  <svg class="heart-svg-active" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                    <defs>
+                      <linearGradient id="gradient-1" x1="35%" y1="100%" x2="80%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF79DA" />
+                        <stop offset="100%" style="stop-color:#9356DC" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <svg class="heart-svg-inactive" viewBox="0 0 54.76 48.08">
+                    <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
+                  </svg>
+                </div>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
