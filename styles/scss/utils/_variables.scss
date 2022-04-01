@@ -1,0 +1,26 @@
+// --- Colors ---
+$colorPrimary: #9356dc;
+$colorSecondary: #ff79fa;
+$colorTertiary: #99e2d0;
+
+$colorIcons: #7e7e7e;
+
+$greyDark: #353535;
+$greyMedium: #eaeaea;
+$greyLight: #f6f6f6;
+
+$white: #ffffff;
+
+$colorBgBtn: linear-gradient(
+  90deg,
+  $colorPrimary 0%,
+  $colorSecondary 100%
+);
+
+// $colorBgBtnHover: lighten($colorBgBtn);
+
+// --- Media Queries BreakPoints ---
+$breakpoints: (
+  tablet: 600px,
+  laptop: 900px,
+);
