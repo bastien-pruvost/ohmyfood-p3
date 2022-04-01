@@ -176,37 +176,6 @@
       & h3 {
         padding-bottom: 4px;
       }
-
-      & .heart-svg-container {
-        width: 25px;
-        height: 30px;
-        margin-right: 5px;
-
-        @media (hover: hover) {
-          &:hover {
-            & .heart-svg-active {
-              opacity: 1;
-              transform: scale(1);
-            }
-            & .heart-svg-inactive {
-              opacity: 0;
-            }
-          }
-        }
-      }
-
-      .check-like {
-        display: none;
-        &:checked ~ label {
-          & .heart-svg-active {
-            opacity: 1;
-            transform: scale(1);
-          }
-          & .heart-svg-inactive {
-            opacity: 0;
-          }
-        }
-      }
     }
   }
 }
