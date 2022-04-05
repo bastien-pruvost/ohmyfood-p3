@@ -21,8 +21,8 @@ $gradientBgBtn: linear-gradient(
 
 $gradientBgBtnHover: linear-gradient(
   -3deg,
-  lighten($colorPrimary, 4.5%) 0%,
-  lighten($colorSecondary, 4%) 100%
+  lighten($colorPrimary, 4%) 0%,
+  lighten($colorSecondary, 3.5%) 100%
 );
 
 // --- Fonts ---
@@ -32,5 +32,5 @@ $fontBody: 'Roboto', sans-serif;
 // --- Media Queries BreakPoints ---
 $breakpoints: (
   tablet: 800px,
-  laptop: 900px,
+  laptop: 1125px,
 );

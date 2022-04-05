@@ -25,17 +25,38 @@
       top: -1px;
     }
   }
+
+  & > .btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 25px 0;
+  }
 }
 
 .menu-grid {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include laptop-only {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 3.5%;
+  }
 }
 
 .menu-part {
+  overflow: hidden;
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+
   & h3 {
     position: relative;
     margin-bottom: 22px;
+    opacity: 0;
+    transform: translateY(50%);
+    animation: display-anim 0.5s ease-in-out forwards;
   }
   & h3::after {
     content: '';
@@ -50,55 +71,81 @@
 
 .food-card {
   @include flex(space-between);
-  position: relative;
-  max-width: 100%;
   border-radius: 16px;
   background-color: $white;
   box-shadow: 1px 3px 15px -3px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: display-anim 0.5s ease-in-out forwards;
 
-  &-left {
-    // flex: 1;
-    padding: 15px;
-    // width: 100%;
+  &__desc {
+    flex-grow: 1;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 14px 0 12px 14px;
+
+    & > h4 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-bottom: 7px;
+    }
+
+    & > p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 
-  &-right {
-    position: relative;
-    align-self: stretch;
+  &__price {
+    align-self: flex-end;
+    padding: 12px 20px 12px 15px;
+  }
+
+  &__checkmark {
     @include flex;
+    flex-shrink: 0;
+    align-self: stretch;
     width: 60px;
+    font-size: 1.35rem;
+    color: $white;
     background-color: $colorTertiary;
+    margin-right: -60px;
     transition: 0.4s ease-in-out;
 
     & > i {
-      font-size: 1.4rem;
-      color: $white;
-      // transform: translateX(100%) rotateZ(-360deg);
-      transition: 0.4s ease-in-out;
+      transform: rotateZ(-240deg);
+      line-height: 0;
+      transition: 0.3s ease-in-out 0.15s;
     }
   }
 
   &:hover {
-    & > .food-card-right {
-      // width: 60px;
+    & .food-card__checkmark {
+      margin-right: 0;
     }
-    & > .food-card-right > i {
-      // transform: translateX(0%) rotateZ(0deg);
+
+    & i {
+      transform: rotateZ(0deg);
     }
   }
+}
 
-  &__name {
-    padding-bottom: 5px;
+@keyframes display-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  &__desc {
-    @include flex(space-between);
-    &__info {
-    }
+@for $i from 1 through 12 {
+  #anim-delay-#{$i} {
+    animation-delay: $i * (0.1s);
   }
 }

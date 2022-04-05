@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   height: 50px;
+  min-width: 185px;
   padding: 0 25px;
-  font-size: 1rem;
   letter-spacing: 0.15px;
   color: $white;
   border-radius: 100px;
   background-image: $gradientBgBtn;
-  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
 
   &::before {
     content: '';
@@ -22,7 +22,7 @@
     height: 100%;
     border-radius: 100px;
     background-image: $gradientBgBtnHover;
-    box-shadow: 1px 4px 10px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: 0.2s ease-in-out;
   }

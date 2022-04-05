@@ -222,7 +222,7 @@ h3 {
 
 .menu__heading h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.5px;
   color: #101010;
@@ -256,23 +256,26 @@ p {
   font-size: 1.1rem;
 }
 
-.food-card__name {
+.food-card__desc > h4 {
   font-size: 1.1rem;
 }
-.food-card__desc__info {
-  font-size: 0.9rem;
+.food-card__desc > p {
+  font-size: 0.95rem;
+  font-weight: 400;
 }
-.food-card__desc__price {
+.food-card__price > span {
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 5.3%;
-  padding-right: 5.3%;
+  max-width: 1400px;
+  padding-left: 5.3vw;
+  padding-right: 5.3vw;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 .btn {
@@ -282,13 +285,13 @@ p {
   justify-content: center;
   align-items: center;
   height: 50px;
+  min-width: 185px;
   padding: 0 25px;
-  font-size: 1rem;
   letter-spacing: 0.15px;
   color: #ffffff;
   border-radius: 100px;
   background-image: linear-gradient(-3deg, #9356dc 5%, #ff79fa 115%);
-  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
 }
 .btn::before {
   content: "";
@@ -298,8 +301,8 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9f69e0 0%, #ff8dfb 100%);
-  box-shadow: 1px 4px 10px -3px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(-3deg, #9e67e0 0%, #ff8bfb 100%);
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: 0.2s ease-in-out;
 }
@@ -365,13 +368,16 @@ p {
 }
 
 .header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
+  z-index: 10;
+}
+.header-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  position: relative;
 }
 .header__logo {
   margin: 18px 0 10px;
@@ -414,15 +420,37 @@ p {
   margin-right: 15px;
   top: -1px;
 }
+.menu > .btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 25px 0;
+}
 
 .menu-grid {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1125px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 3.5%;
+  }
 }
 
+.menu-part {
+  overflow: hidden;
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+}
 .menu-part h3 {
   position: relative;
   margin-bottom: 22px;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: display-anim 0.5s ease-in-out forwards;
 }
 .menu-part h3::after {
   content: "";
@@ -439,42 +467,117 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  max-width: 100%;
   border-radius: 16px;
   background-color: #ffffff;
   box-shadow: 1px 3px 15px -3px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: display-anim 0.5s ease-in-out forwards;
 }
-.food-card-left {
-  padding: 15px;
+.food-card__desc {
+  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 14px 0 12px 14px;
 }
-.food-card-right {
-  position: relative;
-  align-self: stretch;
+.food-card__desc > h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-bottom: 7px;
+}
+.food-card__desc > p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.food-card__price {
+  align-self: flex-end;
+  padding: 12px 20px 12px 15px;
+}
+.food-card__checkmark {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
   width: 60px;
-  background-color: #99e2d0;
-  transition: 0.4s ease-in-out;
-}
-.food-card-right > i {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: #ffffff;
+  background-color: #99e2d0;
+  margin-right: -60px;
   transition: 0.4s ease-in-out;
 }
-.food-card__name {
-  padding-bottom: 5px;
+.food-card__checkmark > i {
+  transform: rotateZ(-240deg);
+  line-height: 0;
+  transition: 0.3s ease-in-out 0.15s;
 }
-.food-card__desc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.food-card:hover .food-card__checkmark {
+  margin-right: 0;
 }
+.food-card:hover i {
+  transform: rotateZ(0deg);
+}
+
+@keyframes display-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#anim-delay-1 {
+  animation-delay: 0.1s;
+}
+
+#anim-delay-2 {
+  animation-delay: 0.2s;
+}
+
+#anim-delay-3 {
+  animation-delay: 0.3s;
+}
+
+#anim-delay-4 {
+  animation-delay: 0.4s;
+}
+
+#anim-delay-5 {
+  animation-delay: 0.5s;
+}
+
+#anim-delay-6 {
+  animation-delay: 0.6s;
+}
+
+#anim-delay-7 {
+  animation-delay: 0.7s;
+}
+
+#anim-delay-8 {
+  animation-delay: 0.8s;
+}
+
+#anim-delay-9 {
+  animation-delay: 0.9s;
+}
+
+#anim-delay-10 {
+  animation-delay: 1s;
+}
+
+#anim-delay-11 {
+  animation-delay: 1.1s;
+}
+
+#anim-delay-12 {
+  animation-delay: 1.2s;
+}
+
+/*# sourceMappingURL=restaurant-menu.css.map */

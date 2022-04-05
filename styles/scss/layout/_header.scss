@@ -1,8 +1,12 @@
 .header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
-  @include flex;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   z-index: 10;
+
+  &-flex {
+    @include flex;
+    position: relative;
+  }
 
   &__logo {
     margin: 18px 0 10px;

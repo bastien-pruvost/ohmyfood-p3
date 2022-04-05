@@ -154,6 +154,10 @@
         object-position: bottom;
       }
 
+      & > .img-align-center {
+        object-position: 50% 62%;
+      }
+
       & > span {
         position: absolute;
         top: 15px;

@@ -22,7 +22,7 @@ h3 {
 
 .menu__heading h2 {
   font-family: $fontHeading;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.5px;
   color: $blackHeading;
@@ -57,14 +57,18 @@ p {
 }
 
 .food-card {
-  &__name {
-    font-size: 1.1rem;
+  &__desc {
+    & > h4 {
+      font-size: 1.1rem;
+    }
+    & > p {
+      font-size: 0.95rem;
+      font-weight: 400;
+    }
   }
 
-  &__desc__info {
-    font-size: 0.9rem;
-  }
-  &__desc__price {
+  &__price > span {
+    font-size: 0.95rem;
     font-weight: 600;
   }
 }

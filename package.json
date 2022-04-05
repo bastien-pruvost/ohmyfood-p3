@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./styles/scss/:./styles/css/ --style expanded",
-    "prefix": "postcss ./styles/css/ --use autoprefixer -d ./styles/prefixed-css/",
+    "prefix": "postcss ./styles/css/*.css --use autoprefixer -d ./styles/prefixed-css/",
     "autoprefix": "onchange \"./styles/css/*.css\" -- npm run prefix"
   },
   "author": "",

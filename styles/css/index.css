@@ -222,7 +222,7 @@ h3 {
 
 .menu__heading h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: -0.5px;
   color: #101010;
@@ -256,23 +256,26 @@ p {
   font-size: 1.1rem;
 }
 
-.food-card__name {
+.food-card__desc > h4 {
   font-size: 1.1rem;
 }
-.food-card__desc__info {
-  font-size: 0.9rem;
+.food-card__desc > p {
+  font-size: 0.95rem;
+  font-weight: 400;
 }
-.food-card__desc__price {
+.food-card__price > span {
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 5.3%;
-  padding-right: 5.3%;
+  max-width: 1400px;
+  padding-left: 5.3vw;
+  padding-right: 5.3vw;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 .btn {
@@ -282,13 +285,13 @@ p {
   justify-content: center;
   align-items: center;
   height: 50px;
+  min-width: 185px;
   padding: 0 25px;
-  font-size: 1rem;
   letter-spacing: 0.15px;
   color: #ffffff;
   border-radius: 100px;
   background-image: linear-gradient(-3deg, #9356dc 5%, #ff79fa 115%);
-  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
 }
 .btn::before {
   content: "";
@@ -298,8 +301,8 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9f69e0 0%, #ff8dfb 100%);
-  box-shadow: 1px 4px 10px -3px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(-3deg, #9e67e0 0%, #ff8bfb 100%);
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: 0.2s ease-in-out;
 }
@@ -365,13 +368,16 @@ p {
 }
 
 .header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
+  z-index: 10;
+}
+.header-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  position: relative;
 }
 .header__logo {
   margin: 18px 0 10px;
@@ -545,6 +551,9 @@ p {
   object-fit: cover;
   object-position: bottom;
 }
+.restaurants .restaurant-card__img > .img-align-center {
+  object-position: 50% 62%;
+}
 .restaurants .restaurant-card__img > span {
   position: absolute;
   top: 15px;
@@ -568,3 +577,5 @@ p {
 .restaurants .restaurant-card__desc h3 {
   padding-bottom: 4px;
 }
+
+/*# sourceMappingURL=index.css.map */
