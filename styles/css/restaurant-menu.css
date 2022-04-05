@@ -301,8 +301,8 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9e67e0 0%, #ff8bfb 100%);
-  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-3deg, #9f69e0 0%, #ff8dfb 100%);
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: 0.2s ease-in-out;
 }
@@ -578,6 +578,38 @@ p {
 
 #anim-delay-12 {
   animation-delay: 1.2s;
+}
+
+#anim-delay-13 {
+  animation-delay: 1.3s;
+}
+
+#anim-delay-14 {
+  animation-delay: 1.4s;
+}
+
+#anim-delay-15 {
+  animation-delay: 1.5s;
+}
+
+#anim-delay-16 {
+  animation-delay: 1.6s;
+}
+
+#anim-delay-17 {
+  animation-delay: 1.7s;
+}
+
+#anim-delay-18 {
+  animation-delay: 1.8s;
+}
+
+#anim-delay-19 {
+  animation-delay: 1.9s;
+}
+
+#anim-delay-20 {
+  animation-delay: 2s;
 }
 
 /*# sourceMappingURL=restaurant-menu.css.map */

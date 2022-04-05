@@ -303,8 +303,8 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9e67e0 0%, #ff8bfb 100%);
-  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-3deg, #9f69e0 0%, #ff8dfb 100%);
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: 0.2s ease-in-out;
 }
