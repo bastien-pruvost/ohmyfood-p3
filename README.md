@@ -6,37 +6,36 @@
 
 ## About the project
 
-Third project of the Web Developer training path on Openclassrooms
-
-
-### Built with
-
-- Html
-- Css
-- Sass
-
-
-### Installation
-
-1. Clone the repo
-
-git clone https://github.com/Dev-BastienPruvost/ohmyfood-p3.git
-
-
-2. Install NPM packages
-
-npm install
-
-
-3. Run Sass and Autoprefixer
-
-npm run sass
-npm run autoprefix
-
-
-4. Start developing on the project
-
-## Credits
-
+Third project of the Web Developer training path on Openclassrooms  
+  
+  
+### Built with  
+  
+- Html  
+- Css  
+- Sass  
+  
+  
+### Installation  
+  
+1. Clone the repo  
+  
+git clone https://github.com/Dev-BastienPruvost/ohmyfood-p3.git  
+  
+  
+2. Install NPM packages  
+  
+npm install  
+  
+  
+3. Run Sass and Autoprefixer  
+  
+npm run sass  
+npm run autoprefix  
+  
+  
+4. Start developing on the project  
+  
+## Credits  
+  
 Project developed by Dev-BastienPruvost
-
