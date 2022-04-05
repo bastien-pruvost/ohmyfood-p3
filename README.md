@@ -16,13 +16,27 @@ Third project of the Web Developer training path on Openclassrooms
 - Sass
 
 
-### Clone the repo :
+### Installation
+
+1. Clone the repo
 
 git clone https://github.com/Dev-BastienPruvost/ohmyfood-p3.git
 
 
+2. Install NPM packages
+
+npm install
+
+
+3. Run Sass and Autoprefixer
+
+npm run sass
+npm run autoprefix
+
+
+4. Start developing on the project
+
 ## Credits
 
 Project developed by Dev-BastienPruvost
-
 
