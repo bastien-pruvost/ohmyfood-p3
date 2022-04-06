@@ -256,6 +256,7 @@ p {
 
 .restaurant-card__desc span {
   font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .food-card__desc > h4 {
