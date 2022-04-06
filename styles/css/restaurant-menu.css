@@ -179,6 +179,7 @@ template {
   display: none;
 }
 
+/* -- Reset default properties -- */
 *,
 ::before,
 ::after {
@@ -198,6 +199,7 @@ a {
   color: inherit;
 }
 
+/* -- Typographies -- */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -274,6 +276,7 @@ p {
   letter-spacing: 0.5px;
 }
 
+/* -- Wrapper -- */
 .wrapper {
   width: 100%;
   max-width: 1400px;
@@ -284,6 +287,108 @@ p {
   overflow: visible;
 }
 
+/* -- Loader Overlay -- */
+.loader {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader-display 3s linear forwards;
+}
+
+/* -- Loader Spinner -- */
+.loader-spinner {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  animation: loader-bounce 3s linear forwards;
+}
+
+/* -- Loader Spinner Out -- */
+.loader-spinner:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: #ff79da transparent #9356dc transparent;
+  animation: loader-rotate 2s linear infinite;
+}
+
+/* -- Loader Spinner In -- */
+.loader-spinner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: transparent #99e2d0 transparent #99e2d0;
+  animation: loader-rotate 2s linear infinite reverse;
+}
+
+/* -- Loader Rotate Animation -- */
+@keyframes loader-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* -- Loader Bounce Animation -- */
+@keyframes loader-bounce {
+  0% {
+    transform: scale(0);
+    animation-timing-function: cubic-bezier(0.49, 0.01, 0.52, 1.99);
+  }
+  10% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0.83, -0.9, 0, 0.99);
+  }
+  95% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+/* -- Loader Overlay Display Animation -- */
+@keyframes loader-display {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* -- Buttons -- */
 .btn {
   position: relative;
   z-index: 1;
@@ -299,6 +404,7 @@ p {
   border-radius: 100px;
   background-image: linear-gradient(-5deg, #9356dc 0%, #ff79fa 100%);
   box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
+  /* -- Button overlay for efficient hover transition -- */
 }
 .btn::before {
   content: "";
@@ -317,12 +423,14 @@ p {
   opacity: 1;
 }
 
+/* -- Like button when unliked -- */
 .heart-inactive {
   position: absolute;
   transition: 0.3s ease-in-out;
   pointer-events: none;
 }
 
+/* -- Like button when liked -- */
 .heart-active {
   position: absolute;
   opacity: 0;
@@ -331,6 +439,7 @@ p {
   pointer-events: none;
 }
 
+/* -- Like button container -- */
 .heart-container {
   position: relative;
   cursor: pointer;
@@ -348,6 +457,7 @@ p {
   }
 }
 
+/* -- Hidden checkbox for toggle like without JS -- */
 .heart-checkbox {
   display: none;
 }
@@ -419,6 +529,7 @@ p {
   height: 120%;
   width: 100%;
   object-fit: cover;
+  object-position: 50% 70%;
 }
 
 .menu {

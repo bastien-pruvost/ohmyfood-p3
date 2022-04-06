@@ -1,3 +1,4 @@
+// -- Banner section with photo --
 .banner {
   position: relative;
   z-index: -1;
@@ -8,9 +9,11 @@
     height: 120%;
     width: 100%;
     object-fit: cover;
+    object-position: 50% 70%;
   }
 }
 
+// -- Menu section --
 .menu {
   background-color: $greyLight;
   border-radius: 40px;
@@ -46,6 +49,7 @@
   }
 }
 
+// -- Menu part (Starter, Dish, Dessert) --
 .menu-part {
   overflow: hidden;
   padding-left: 5.3%;
@@ -69,6 +73,7 @@
   }
 }
 
+// -- Dish cards --
 .food-card {
   @include flex(space-between);
   border-radius: 16px;
@@ -104,6 +109,7 @@
     padding: 12px 20px 12px 15px;
   }
 
+  // -- Green checkmark for hover animation --
   &__checkmark {
     @include flex;
     flex-shrink: 0;
@@ -133,6 +139,7 @@
   }
 }
 
+// -- Display animation for Food Cards --
 @keyframes display-anim {
   0% {
     opacity: 0;
@@ -144,6 +151,7 @@
   }
 }
 
+// -- Loop to delay each Food Card in animation --
 @for $i from 1 through 20 {
   #anim-delay-#{$i} {
     animation-delay: $i * (0.1s);
