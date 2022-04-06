@@ -212,7 +212,7 @@ body {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 h3 {
@@ -244,12 +244,12 @@ p {
 
 .location {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #353535;
 }
 
 .functioning-step__text {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .restaurant-card__desc span {
@@ -265,7 +265,13 @@ p {
 }
 .food-card__price > span {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
 }
 
 .wrapper {
@@ -288,9 +294,10 @@ p {
   min-width: 185px;
   padding: 0 25px;
   letter-spacing: 0.15px;
+  line-height: 1;
   color: #ffffff;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9356dc 5%, #ff79fa 115%);
+  background-image: linear-gradient(-5deg, #9356dc 0%, #ff79fa 100%);
   box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
 }
 .btn::before {
@@ -310,36 +317,21 @@ p {
   opacity: 1;
 }
 
-.heart-svg-inactive {
-  fill: none;
-  stroke: #010101;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-inactive {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-active {
-  fill: url("#gradient-1");
-  stroke: url("#gradient-1");
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-active {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transform: scale(0);
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-container {
+.heart-container {
   position: relative;
   cursor: pointer;
   width: 24px;
@@ -347,23 +339,23 @@ p {
   margin-right: 5px;
 }
 @media (hover: hover) {
-  .heart-svg-container:hover .heart-svg-active {
+  .heart-container:hover .heart-active {
     opacity: 1;
     transform: scale(1);
   }
-  .heart-svg-container:hover .heart-svg-inactive {
+  .heart-container:hover .heart-inactive {
     opacity: 0;
   }
 }
 
-.check-like {
+.heart-checkbox {
   display: none;
 }
-.check-like:checked ~ label .heart-svg-active {
+.heart-checkbox:checked ~ label .heart-active {
   opacity: 1;
   transform: scale(1);
 }
-.check-like:checked ~ label .heart-svg-inactive {
+.heart-checkbox:checked ~ label .heart-inactive {
   opacity: 0;
 }
 
@@ -390,6 +382,31 @@ p {
 .header__arrow-back > i {
   font-size: 1.25rem;
   color: #353535;
+}
+
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 25px 10px;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 15px;
+}
+.footer__list > li {
+  margin-bottom: 10px;
+}
+.footer__list > li > i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.footer__list > li > a:hover {
+  text-decoration: underline;
 }
 
 .location {
@@ -419,45 +436,47 @@ p {
   .hero {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    max-width: 1200px;
-    padding: 0 5.3%;
+    max-width: 1400px;
+    padding: 0 5.3vw;
   }
   .hero .wrapper {
     padding: 0;
   }
 }
-.hero .presentation {
+.hero > .presentation {
   padding: 40px 0;
   text-align: center;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 800px) {
-  .hero .presentation {
+  .hero > .presentation {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    text-align: left;
+    margin: auto;
   }
 }
-.hero .presentation h2 {
+.hero > .presentation h2 {
   margin-bottom: 15px;
 }
-.hero .presentation p {
+.hero > .presentation p {
   margin-bottom: 30px;
 }
-.hero .functioning {
+.hero > .functioning {
   padding: 50px 0;
 }
-.hero .functioning h2 {
+.hero > .functioning h2 {
   margin-bottom: 25px;
 }
 @media screen and (min-width: 800px) {
-  .hero .functioning h2 {
+  .hero > .functioning h2 {
     text-align: center;
   }
 }
-.hero .functioning .functioning-step {
+.hero > .functioning .functioning-step {
   position: relative;
   z-index: 1;
   display: flex;
@@ -471,7 +490,7 @@ p {
   background-color: #f6f6f6;
   box-shadow: 1px 4px 12px -1px rgba(0, 0, 0, 0.18);
 }
-.hero .functioning .functioning-step::before {
+.hero > .functioning .functioning-step::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -484,10 +503,10 @@ p {
   transition: 0.2s ease-in-out;
   opacity: 0;
 }
-.hero .functioning .functioning-step:hover::before {
+.hero > .functioning .functioning-step:hover::before {
   opacity: 1;
 }
-.hero .functioning .functioning-step__number {
+.hero > .functioning .functioning-step__number {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -503,15 +522,19 @@ p {
   color: #ffffff;
   background-color: #9356dc;
 }
-.hero .functioning .functioning-step__icon {
+.hero > .functioning .functioning-step__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-size: 1.2rem;
   margin-left: 2%;
   color: #7e7e7e;
   width: 30px;
 }
-.hero .functioning .functioning-step__text {
-  padding: 0 5% 0 5%;
+.hero > .functioning .functioning-step__text {
+  margin: 0 5%;
 }
 
 .restaurants {
@@ -536,14 +559,37 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   border-radius: 16px;
-  overflow: hidden;
   box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+.restaurants .restaurant-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+@media (hover: hover) {
+  .restaurants .restaurant-card:hover {
+    transform: translateY(-1px);
+  }
+  .restaurants .restaurant-card:hover::before {
+    opacity: 1;
+  }
 }
 .restaurants .restaurant-card__img {
   position: relative;
   width: 100%;
   height: 175px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
 }
 .restaurants .restaurant-card__img > img {
   width: 100%;
@@ -572,6 +618,7 @@ p {
   align-items: center;
   width: 100%;
   padding: 17px 20px 17px 15px;
+  border-radius: 0 0 16px 16px;
   background-color: #ffffff;
 }
 .restaurants .restaurant-card__desc h3 {

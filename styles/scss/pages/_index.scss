@@ -23,15 +23,15 @@
   @include tablet-only {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    max-width: 1200px;
-    padding: 0 5.3%;
+    max-width: 1400px;
+    padding: 0 5.3vw;
 
     .wrapper {
       padding: 0;
     }
   }
 
-  & .presentation {
+  & > .presentation {
     padding: 40px 0;
     text-align: center;
     background-color: $greyLight;
@@ -39,6 +39,8 @@
     @include tablet-only {
       @include flex;
       background-color: transparent;
+      text-align: left;
+      margin: auto;
     }
 
     & h2 {
@@ -50,7 +52,7 @@
     }
   }
 
-  & .functioning {
+  & > .functioning {
     padding: 50px 0;
 
     & h2 {
@@ -105,6 +107,7 @@
       }
 
       &__icon {
+        @include flex;
         position: relative;
         font-size: 1.2rem;
         margin-left: 2%;
@@ -113,7 +116,7 @@
       }
 
       &__text {
-        padding: 0 5% 0 5%;
+        margin: 0 5%;
       }
     }
   }
@@ -138,14 +141,39 @@
   }
   .restaurant-card {
     @include flex(center, center, column);
+    position: relative;
     border-radius: 16px;
-    overflow: hidden;
     box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-1px);
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
 
     &__img {
       position: relative;
       width: 100%;
       height: 175px;
+      overflow: hidden;
+      border-radius: 16px 16px 0 0;
 
       & > img {
         width: 100%;
@@ -175,6 +203,7 @@
       @include flex(space-between, center);
       width: 100%;
       padding: 17px 20px 17px 15px;
+      border-radius: 0 0 16px 16px;
       background-color: $white;
 
       & h3 {

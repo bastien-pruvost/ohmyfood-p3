@@ -1,33 +1,18 @@
-.heart-svg-inactive {
-  fill: none;
-  stroke: #010101;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-inactive {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-active {
-  fill: url('#gradient-1');
-  stroke: url('#gradient-1');
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-active {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transform: scale(0);
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-container {
+.heart-container {
   position: relative;
   cursor: pointer;
   width: 24px;
@@ -36,26 +21,15 @@
 
   @media (hover: hover) {
     &:hover {
-      & .heart-svg-active {
-        opacity: 1;
-        transform: scale(1);
-      }
-      & .heart-svg-inactive {
-        opacity: 0;
-      }
+      @include heart-activation;
     }
   }
 }
 
-.check-like {
+.heart-checkbox {
   display: none;
+
   &:checked ~ label {
-    & .heart-svg-active {
-      opacity: 1;
-      transform: scale(1);
-    }
-    & .heart-svg-inactive {
-      opacity: 0;
-    }
+    @include heart-activation;
   }
 }

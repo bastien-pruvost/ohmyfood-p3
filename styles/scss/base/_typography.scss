@@ -12,7 +12,7 @@ body {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 h3 {
@@ -44,12 +44,12 @@ p {
 
 .location {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: $greyDark;
 }
 
 .functioning-step__text {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .restaurant-card__desc span {
@@ -69,6 +69,14 @@ p {
 
   &__price > span {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
+  }
+}
+
+.footer {
+  &__logo {
+    font-family: $fontHeading;
+    font-size: 1.125rem;
+    letter-spacing: 0.5px;
   }
 }

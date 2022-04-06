@@ -16,3 +16,13 @@
     @content;
   }
 }
+
+@mixin heart-activation {
+  & .heart-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  & .heart-inactive {
+    opacity: 0;
+  }
+}

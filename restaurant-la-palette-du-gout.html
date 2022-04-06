@@ -19,7 +19,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,27 +37,13 @@
 
     <section class="menu">
 
-      <div class="wrapper">
-        <div class="menu__heading">
-          <h2>La palette du goût</h2>
-          <input id="check-like" type="checkbox" class="check-like">
-          <label for="check-like">
-            <div class="heart-svg-container">
-              <svg class="heart-svg-active" viewBox="0 0 54.76 48.08">
-                <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
-                <defs>
-                  <linearGradient id="gradient-1" x1="35%" y1="100%" x2="80%" y2="0%">
-                    <stop offset="0%" style="stop-color:#FF79DA" />
-                    <stop offset="100%" style="stop-color:#9356DC" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <svg class="heart-svg-inactive" viewBox="0 0 54.76 48.08">
-                <path d="M72.1,31.24a13.75,13.75,0,0,0-19.45,0h0L50,33.89l-2.65-2.65A13.75,13.75,0,0,0,27.9,50.69l2.65,2.65L50,72.79,69.45,53.34l2.65-2.65a13.75,13.75,0,0,0,0-19.45Z" transform="translate(-22.62 -25.96)" />
-              </svg>
-            </div>
-          </label>
-        </div>
+      <div class="menu__heading wrapper">
+        <h2>La palette du goût</h2>
+        <input id="heart-checkbox" type="checkbox" class="heart-checkbox">
+        <label for="heart-checkbox" class="heart-container">
+          <object class="heart-inactive" data="./images/heart-svg-inactive.svg" type="image/svg+xml"></object>
+          <object class="heart-active" data="./images/heart-svg-active.svg" type="image/svg+xml"></object>
+        </label>
       </div>
 
       <div class="menu-grid">
@@ -199,8 +185,19 @@
       <a href="#" class="btn">Commander</a>
 
     </section>
-
   </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <span class="footer__logo">ohmyfood</span>
+      <ul class="footer__list">
+        <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+        <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 

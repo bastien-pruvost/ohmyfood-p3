@@ -212,7 +212,7 @@ body {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 h3 {
@@ -244,12 +244,12 @@ p {
 
 .location {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #353535;
 }
 
 .functioning-step__text {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .restaurant-card__desc span {
@@ -265,7 +265,13 @@ p {
 }
 .food-card__price > span {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
 }
 
 .wrapper {
@@ -288,9 +294,10 @@ p {
   min-width: 185px;
   padding: 0 25px;
   letter-spacing: 0.15px;
+  line-height: 1;
   color: #ffffff;
   border-radius: 100px;
-  background-image: linear-gradient(-3deg, #9356dc 5%, #ff79fa 115%);
+  background-image: linear-gradient(-5deg, #9356dc 0%, #ff79fa 100%);
   box-shadow: 1px 3px 10px -2px rgba(0, 0, 0, 0.3);
 }
 .btn::before {
@@ -310,36 +317,21 @@ p {
   opacity: 1;
 }
 
-.heart-svg-inactive {
-  fill: none;
-  stroke: #010101;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-inactive {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-active {
-  fill: url("#gradient-1");
-  stroke: url("#gradient-1");
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
+.heart-active {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transform: scale(0);
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.heart-svg-container {
+.heart-container {
   position: relative;
   cursor: pointer;
   width: 24px;
@@ -347,23 +339,23 @@ p {
   margin-right: 5px;
 }
 @media (hover: hover) {
-  .heart-svg-container:hover .heart-svg-active {
+  .heart-container:hover .heart-active {
     opacity: 1;
     transform: scale(1);
   }
-  .heart-svg-container:hover .heart-svg-inactive {
+  .heart-container:hover .heart-inactive {
     opacity: 0;
   }
 }
 
-.check-like {
+.heart-checkbox {
   display: none;
 }
-.check-like:checked ~ label .heart-svg-active {
+.heart-checkbox:checked ~ label .heart-active {
   opacity: 1;
   transform: scale(1);
 }
-.check-like:checked ~ label .heart-svg-inactive {
+.heart-checkbox:checked ~ label .heart-inactive {
   opacity: 0;
 }
 
@@ -390,6 +382,31 @@ p {
 .header__arrow-back > i {
   font-size: 1.25rem;
   color: #353535;
+}
+
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 25px 10px;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 15px;
+}
+.footer__list > li {
+  margin-bottom: 10px;
+}
+.footer__list > li > i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.footer__list > li > a:hover {
+  text-decoration: underline;
 }
 
 .banner {
@@ -481,7 +498,7 @@ p {
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
-  padding: 14px 0 12px 14px;
+  padding: 14px 0 12px 12px;
 }
 .food-card__desc > h4 {
   text-overflow: ellipsis;

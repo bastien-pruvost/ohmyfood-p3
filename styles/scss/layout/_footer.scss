@@ -1,0 +1,28 @@
+.footer {
+  background-color: $greyDark;
+  color: $white;
+  padding: 25px 10px;
+
+  &__logo {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__list > li {
+    margin-bottom: 10px;
+
+    & > i {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.8rem;
+      margin-right: 10px;
+      height: 15px;
+      width: 15px;
+    }
+
+    & > a:hover {
+      text-decoration: underline;
+    }
+  }
+}
