@@ -176,11 +176,8 @@
     }
 
     @media (hover: hover) {
-      &:hover {
-        transform: translateZ(2px);
-        &::before {
-          opacity: 1;
-        }
+      &:hover::before {
+        opacity: 1;
       }
     }
 

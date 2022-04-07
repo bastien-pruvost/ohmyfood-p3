@@ -705,9 +705,6 @@ p {
   transition: 0.25s ease-in-out;
 }
 @media (hover: hover) {
-  .restaurants .restaurant-card:hover {
-    transform: translateZ(2px);
-  }
   .restaurants .restaurant-card:hover::before {
     opacity: 1;
   }
