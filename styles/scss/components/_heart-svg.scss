@@ -1,10 +1,10 @@
 /* -- Like button when unliked -- */
 .heart-inactive {
   position: absolute;
-  transition: 0.3s ease-in-out;
+  transition: 0.35s ease-in-out;
   pointer-events: none;
-  width: 80%;
-  height: 80%;
+  width: 24px;
+  height: 24px;
 }
 
 /* -- Like button when liked -- */
@@ -12,10 +12,10 @@
   position: absolute;
   opacity: 0;
   transform: scale(0);
-  transition: 0.3s ease-in-out;
+  transition: 0.35s ease-in-out;
   pointer-events: none;
-  width: 80%;
-  height: 80%;
+  width: 24px;
+  height: 24px;
 }
 
 /* -- Like button container -- */
