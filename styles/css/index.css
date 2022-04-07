@@ -243,8 +243,8 @@ p {
   color: #000;
 }
 
-.location {
-  font-size: 1.05rem;
+.location > h5 {
+  font-size: 1rem;
   font-weight: 700;
   color: #353535;
 }
@@ -446,6 +446,7 @@ p {
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -533,14 +534,14 @@ p {
   justify-content: center;
   align-items: center;
 }
-.location span {
+.location h5 {
   position: relative;
   margin: 15px 0;
 }
 .location i {
   position: absolute;
   left: -28px;
-  top: 1px;
+  top: 0;
 }
 
 .hero {
@@ -750,6 +751,12 @@ p {
 }
 .restaurants .restaurant-card__desc h3 {
   padding-bottom: 4px;
+}
+.restaurants .restaurant-card > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */

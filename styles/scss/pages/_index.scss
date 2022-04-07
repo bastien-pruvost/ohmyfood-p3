@@ -3,7 +3,7 @@
   background-color: $greyMedium;
   @include flex;
 
-  & span {
+  & h5 {
     position: relative;
     margin: 15px 0;
   }
@@ -11,7 +11,7 @@
   & i {
     position: absolute;
     left: -28px;
-    top: 1px;
+    top: 0;
   }
 }
 
@@ -225,6 +225,13 @@
       & h3 {
         padding-bottom: 4px;
       }
+    }
+
+    & > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
     }
   }
 }

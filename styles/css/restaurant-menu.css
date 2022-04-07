@@ -243,8 +243,8 @@ p {
   color: #000;
 }
 
-.location {
-  font-size: 1.05rem;
+.location > h5 {
+  font-size: 1rem;
   font-weight: 700;
   color: #353535;
 }
@@ -446,6 +446,7 @@ p {
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -42,8 +42,8 @@ p {
   color: #000;
 }
 
-.location {
-  font-size: 1.05rem;
+.location > h5 {
+  font-size: 1rem;
   font-weight: 700;
   color: $greyDark;
 }

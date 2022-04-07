@@ -21,6 +21,7 @@
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  z-index: 5;
   @include flex;
   cursor: pointer;
   width: 30px;
