@@ -428,6 +428,8 @@ p {
   position: absolute;
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button when liked -- */
@@ -437,23 +439,26 @@ p {
   transform: scale(0);
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
+  transition: 0.2s ease-in-out;
 }
 @media (hover: hover) {
-  .heart-container:hover .heart-active {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .heart-container:hover .heart-inactive {
-    opacity: 0;
+  .heart-container:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -515,8 +520,10 @@ p {
   height: 15px;
   width: 15px;
 }
-.footer__list > li > a:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .footer__list > li > a:hover {
+    text-decoration: underline;
+  }
 }
 
 .location {
@@ -578,6 +585,11 @@ p {
 .hero > .functioning {
   padding: 50px 0;
 }
+@media screen and (min-width: 800px) {
+  .hero > .functioning {
+    padding: 50px 8%;
+  }
+}
 .hero > .functioning h2 {
   margin-bottom: 25px;
 }
@@ -599,6 +611,7 @@ p {
   border-radius: 20px;
   background-color: #f6f6f6;
   box-shadow: 1px 4px 12px -1px rgba(0, 0, 0, 0.18);
+  cursor: default;
 }
 .hero > .functioning .functioning-step::before {
   content: "";
@@ -607,14 +620,17 @@ p {
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
+  border-radius: 20px;
   background-color: #f5edff;
   box-shadow: 1px 4px 12px -1px rgba(0, 0, 0, 0.1);
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
   opacity: 0;
 }
 .hero > .functioning .functioning-step:hover::before {
   opacity: 1;
+}
+.hero > .functioning .functioning-step:hover > i {
+  color: #9356dc;
 }
 .hero > .functioning .functioning-step__number {
   display: flex;
@@ -642,9 +658,10 @@ p {
   margin-left: 2%;
   color: #7e7e7e;
   width: 30px;
+  transition: 0.25s ease-in-out;
 }
 .hero > .functioning .functioning-step__text {
-  margin: 0 5%;
+  margin: 0 12% 0 5%;
 }
 
 .restaurants {
@@ -672,7 +689,7 @@ p {
   position: relative;
   border-radius: 16px;
   box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.2);
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .restaurants .restaurant-card::before {
   content: "";
@@ -682,13 +699,13 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 3px 12px -2px rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 @media (hover: hover) {
   .restaurants .restaurant-card:hover {
-    transform: translateY(-1px);
+    transform: translateZ(2px);
   }
   .restaurants .restaurant-card:hover::before {
     opacity: 1;

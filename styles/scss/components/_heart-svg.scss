@@ -3,6 +3,8 @@
   position: absolute;
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button when liked -- */
@@ -12,19 +14,23 @@
   transform: scale(0);
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  @include flex;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
+  transition: 0.2s ease-in-out;
 
   @media (hover: hover) {
     &:hover {
-      @include heart-activation;
+      transform: scale(1.1);
     }
   }
 }

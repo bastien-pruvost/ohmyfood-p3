@@ -428,6 +428,8 @@ p {
   position: absolute;
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button when liked -- */
@@ -437,23 +439,26 @@ p {
   transform: scale(0);
   transition: 0.3s ease-in-out;
   pointer-events: none;
+  width: 80%;
+  height: 80%;
 }
 
 /* -- Like button container -- */
 .heart-container {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
+  transition: 0.2s ease-in-out;
 }
 @media (hover: hover) {
-  .heart-container:hover .heart-active {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .heart-container:hover .heart-inactive {
-    opacity: 0;
+  .heart-container:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -515,8 +520,10 @@ p {
   height: 15px;
   width: 15px;
 }
-.footer__list > li > a:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .footer__list > li > a:hover {
+    text-decoration: underline;
+  }
 }
 
 .banner {
