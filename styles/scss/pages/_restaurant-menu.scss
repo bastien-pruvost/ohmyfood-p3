@@ -109,7 +109,7 @@
     padding: 12px 20px 12px 15px;
   }
 
-  // -- Green checkmark for hover animation --
+  // -- Green checkmark and hover animation --
   &__checkmark {
     @include flex;
     flex-shrink: 0;
@@ -139,7 +139,7 @@
   }
 }
 
-// -- Display animation for Food Cards --
+// -- Progressive food cards animation --
 @keyframes display-anim {
   0% {
     opacity: 0;
@@ -151,8 +151,8 @@
   }
 }
 
-// -- Loop to delay each Food Card in animation --
-@for $i from 1 through 20 {
+// -- Loop to delay each Food Card animation --
+@for $i from 1 through 15 {
   #anim-delay-#{$i} {
     animation-delay: $i * (0.1s);
   }

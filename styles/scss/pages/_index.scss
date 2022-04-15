@@ -33,6 +33,7 @@
     }
   }
 
+  // - Ohmyfood presentation -
   & > .presentation {
     padding: 40px 0;
     text-align: center;
@@ -54,6 +55,7 @@
     }
   }
 
+  // - Functionning section -
   & > .functioning {
     padding: 50px 0;
 
@@ -154,7 +156,7 @@
     }
   }
 
-  // -- Restaurant card --
+  // - Restaurant card -
   .restaurant-card {
     @include flex(center, center, column);
     position: relative;

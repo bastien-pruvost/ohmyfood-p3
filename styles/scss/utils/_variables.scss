@@ -12,13 +12,14 @@ $greyMedium: #eaeaea;
 $greyLight: #f6f6f6;
 $white: #ffffff;
 
-// --- Gradients ---
+// --- Gradient for Button background ---
 $gradientBgBtn: linear-gradient(
   -5deg,
   $colorPrimary 0%,
   $colorSecondary 100%
 );
 
+// --- Gradient for Button background when hover ---
 $gradientBgBtnHover: linear-gradient(
   -3deg,
   lighten($colorPrimary, 4.5%) 0%,

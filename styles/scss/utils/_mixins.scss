@@ -1,3 +1,4 @@
+// --- Mixin for flexbox (center by default if no arguments) ---
 @mixin flex($justify: center, $align: center, $direction: row) {
   display: flex;
   flex-direction: $direction;
@@ -5,6 +6,7 @@
   align-items: $align;
 }
 
+// --- Mixins for media queries ---
 @mixin tablet-only {
   @media screen and (min-width: map-get($breakpoints, tablet)) {
     @content;
@@ -17,6 +19,7 @@
   }
 }
 
+// --- Mixin for heart apparition ---
 @mixin heart-activation {
   & .heart-active {
     opacity: 1;
