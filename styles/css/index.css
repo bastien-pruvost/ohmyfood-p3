@@ -276,7 +276,7 @@ p {
   letter-spacing: 0.5px;
 }
 
-/* -- Wrapper -- */
+/* -- Content Wrapper -- */
 .wrapper {
   width: 100%;
   max-width: 1400px;
@@ -463,7 +463,7 @@ p {
   }
 }
 
-/* -- Hidden checkbox for toggle like without JS -- */
+/* -- Hidden checkbox for toggle without JS -- */
 .heart-checkbox {
   display: none;
 }
