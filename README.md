@@ -52,13 +52,41 @@ We had to add a fake loader, animations, and use Sass / Scss
   cd ohmyfood-p3
 ```
 
-3. Run `index.html` file with your browser  
-  
-  
-> **Note**  
-> To work on the project you need to run `npm install`  
-> Then run `npm run sass` and `npm run autoprefixer`  in different terminals  
-> This will generate css files from scss files when you save a file, and prefix the css to fit all browsers
+3. Install dependencies:
+
+```bash
+  pnpm install
+  # or
+  yarn install
+  # or
+  npm install
+```
+   
+1. Then run `sass` and `autoprefixer` in separated terminals:
+
+- In a first terminal:
+
+```bash
+  pnpm sass
+  # or
+  yarn sass
+  # or
+  npm run sass
+```
+
+- In a second terminal:
+
+```bash
+  pnpm autoprefixer
+  # or
+  yarn autoprefixer
+  # or
+  npm run autoprefixer
+```
+
+- This will generate css files from scss files when you save a file, and prefix the css to fit all browsers
+
+5. Run `index.html` file with your browser.
 
 
 ## Suggestions
