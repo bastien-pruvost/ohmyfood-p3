@@ -52,8 +52,9 @@ We had to add a fake loader, animations, and use Sass / Scss
   cd ohmyfood-p3
 ```
 
-3. Run `index.html` file with your browser
-
+3. Run `index.html` file with your browser  
+  
+  
 > **Note**  
 > To work on the project you need to run `npm install`  
 > Then run `npm run sass` and `npm run autoprefixer`  in different terminals  
