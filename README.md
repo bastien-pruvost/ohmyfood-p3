@@ -54,10 +54,10 @@ We had to add a fake loader, animations, and use Sass / Scss
 
 3. Run `index.html` file with your browser
 
->**info**  
->To work on the project you need to run `npm install`  
->Then run `npm run sass` and `npm run autoprefixer`  in different terminals  
->This will generate css files from scss files when you save a file, and prefix the css to fit all browsers
+> **Note**  
+> To work on the project you need to run `npm install`  
+> Then run `npm run sass` and `npm run autoprefixer`  in different terminals  
+> This will generate css files from scss files when you save a file, and prefix the css to fit all browsers
 
 
 ## Suggestions
