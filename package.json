@@ -1,16 +1,22 @@
 {
   "name": "ohmyfood-p3",
   "version": "1.0.0",
-  "description": "Third project for Openclassrooms",
-  "main": "index.js",
+  "private": true,
+  "description": "Third project of Openclassrooms Web Developer Bootcamp.",
+  "keywords": [],
+  "homepage": "https://github.com/bastien-pruvost/ohmyfood-p3#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Bastien Pruvost",
+    "url": "https://github.com/bastien-pruvost"
+  },
+  "main": "index.html",
+  "browserslist": "defaults",
   "scripts": {
     "sass": "sass --watch ./styles/scss/:./styles/css/ --style expanded",
     "prefix": "postcss ./styles/css/*.css --use autoprefixer -d ./styles/prefixed-css/",
     "autoprefix": "onchange \"./styles/css/*.css\" -- npm run prefix"
   },
-  "author": "",
-  "license": "ISC",
-  "browserslist": "defaults",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "onchange": "^7.1.0",

@@ -1,188 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>OhMyFood | Accueil</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OhMyFood | Accueil</title>
+    <!-- Css Style -->
+    <link rel="stylesheet" href="./styles/prefixed-css/index.css?v1.1" />
 
-  <!-- Css Style -->
-  <link rel="stylesheet" href="./styles/prefixed-css/index.css?v1.1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo/favicon-green.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./images/logo/favicon-green.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <!-- Loader -->
 
-<body>
-
-  <!-- Loader -->
-
-  <div class="loader">
-    <div class="loader-spinner"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="header-flex wrapper">
-      <h1 class="header__logo">ohmyfood</h1>
-    </div>
-  </header>
-
-  <main>
-    <!-- Location section -->
-    <section class="location">
-      <h5><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h5>
-    </section>
-
-    <!-- Hero section -->
-    <div class="hero">
-      <section class="presentation">
-        <div class="wrapper">
-          <h2>Réservez le menu qui<br>vous convient</h2>
-          <p>Découvrez des restaurants d'exception,<br>séléctionnés par nos soins.</p>
-          <a href="#restaurants" class="btn">Explorer nos restaurants</a>
-        </div>
-      </section>
-
-      <section class="functioning">
-        <div class="wrapper">
-
-          <h2>Fonctionnement</h2>
-
-          <ul class="functioning-list">
-            <li class="functioning-step">
-              <span class="functioning-step__number">1</span>
-              <i class="fas fa-mobile-alt functioning-step__icon"></i>
-              <span class="functioning-step__text">Choisissez un restaurant</span>
-            </li>
-
-            <li class="functioning-step">
-              <span class="functioning-step__number">2</span>
-              <i class="fas fa-list-ul functioning-step__icon"></i>
-              <span class="functioning-step__text">Composez votre menu</span>
-            </li>
-
-            <li class="functioning-step">
-              <span class="functioning-step__number">3</span>
-              <i class="fas fa-store functioning-step__icon"></i>
-              <span class="functioning-step__text">Dégustez au restaurant</span>
-            </li>
-          </ul>
-
-        </div>
-      </section>
+    <div class="loader">
+      <div class="loader-spinner"></div>
     </div>
 
-    <!-- Restaurants section -->
-    <section class="restaurants" id="restaurants">
-      <div class="wrapper">
-        <h2>Restaurants</h2>
-        <div class="restaurants-grid">
-
-          <!-- Restaurant card -->
-          <div class="restaurant-card">
-            <div class="restaurant-card__img">
-              <img src="./images/restaurants/la-palette-du-gout.jpg" alt="">
-              <span>Nouveau</span>
-            </div>
-            <div class="restaurant-card__desc">
-              <div>
-                <h3>La palette du goût</h3>
-                <span>Ménilmontant</span>
-              </div>
-              <form action="#">
-                <input id="heart-checkbox-1" type="checkbox" class="heart-checkbox">
-                <label for="heart-checkbox-1" class="heart-container">
-                  <object class="heart-inactive" data="./images/heart-svg-inactive.svg" type="image/svg+xml"></object>
-                  <object class="heart-active" data="./images/heart-svg-active.svg" type="image/svg+xml"></object>
-                </label>
-              </form>
-            </div>
-            <a href="./restaurant-la-palette-du-gout.html" aria-label="Acceder au Restaurant La palette du gout"></a>
-          </div>
-
-          <div class="restaurant-card">
-            <div class="restaurant-card__img">
-              <img src="./images/restaurants/la-note-enchantée.jpg" alt="" class="img-align-center">
-              <span>Nouveau</span>
-            </div>
-            <div class="restaurant-card__desc">
-              <div>
-                <h3>La note enchantée</h3>
-                <span>Charonne</span>
-              </div>
-              <input id="heart-checkbox-2" type="checkbox" class="heart-checkbox">
-              <label for="heart-checkbox-2" class="heart-container">
-                <object class="heart-inactive" data="./images/heart-svg-inactive.svg" type="image/svg+xml"></object>
-                <object class="heart-active" data="./images/heart-svg-active.svg" type="image/svg+xml"></object>
-              </label>
-            </div>
-            <a href="./restaurant-la-note-enchantee.html" aria-label="Acceder au Restaurant La note enchantée"></a>
-          </div>
-
-          <div class="restaurant-card">
-            <div class="restaurant-card__img">
-              <img src="./images/restaurants/a-la-francaise.jpg" alt="">
-            </div>
-            <div class="restaurant-card__desc">
-              <div>
-                <h3>A la française</h3>
-                <span>Cité Rouge</span>
-              </div>
-              <input id="heart-checkbox-3" type="checkbox" class="heart-checkbox">
-              <label for="heart-checkbox-3" class="heart-container">
-                <object class="heart-inactive" data="./images/heart-svg-inactive.svg" type="image/svg+xml"></object>
-                <object class="heart-active" data="./images/heart-svg-active.svg" type="image/svg+xml"></object>
-              </label>
-            </div>
-            <a href="./restaurant-a-la-francaise.html" aria-label="Acceder au Restaurant A la Française"></a>
-          </div>
-
-          <div class="restaurant-card">
-            <div class="restaurant-card__img">
-              <img src="./images/restaurants/le-delice-des-sens.jpg" alt="">
-            </div>
-            <div class="restaurant-card__desc">
-              <div>
-                <h3>Le délice des sens</h3>
-                <span>Folie-Méricourt</span>
-              </div>
-              <input id="heart-checkbox-4" type="checkbox" class="heart-checkbox">
-              <label for="heart-checkbox-4" class="heart-container">
-                <object class="heart-inactive" data="./images/heart-svg-inactive.svg" type="image/svg+xml"></object>
-                <object class="heart-active" data="./images/heart-svg-active.svg" type="image/svg+xml"></object>
-              </label>
-            </div>
-            <a href="./restaurant-le-delice-des-sens.html" aria-label="Acceder au Restaurant Le délice des sens"></a>
-          </div>
-
-        </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-flex wrapper">
+        <h1 class="header__logo">ohmyfood</h1>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrapper">
-      <span class="footer__logo">ohmyfood</span>
-      <ul class="footer__list">
-        <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
-        <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:example@ohmyfood.com">Contact</a></li>
-      </ul>
-    </div>
-  </footer>
+    <main>
+      <!-- Location section -->
+      <section class="location">
+        <h5><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h5>
+      </section>
 
-</body>
+      <!-- Hero section -->
+      <div class="hero">
+        <section class="presentation">
+          <div class="wrapper">
+            <h2>Réservez le menu qui<br />vous convient</h2>
+            <p>Découvrez des restaurants d'exception,<br />séléctionnés par nos soins.</p>
+            <a href="#restaurants" class="btn">Explorer nos restaurants</a>
+          </div>
+        </section>
 
+        <section class="functioning">
+          <div class="wrapper">
+            <h2>Fonctionnement</h2>
+
+            <ul class="functioning-list">
+              <li class="functioning-step">
+                <span class="functioning-step__number">1</span>
+                <i class="fas fa-mobile-alt functioning-step__icon"></i>
+                <span class="functioning-step__text">Choisissez un restaurant</span>
+              </li>
+
+              <li class="functioning-step">
+                <span class="functioning-step__number">2</span>
+                <i class="fas fa-list-ul functioning-step__icon"></i>
+                <span class="functioning-step__text">Composez votre menu</span>
+              </li>
+
+              <li class="functioning-step">
+                <span class="functioning-step__number">3</span>
+                <i class="fas fa-store functioning-step__icon"></i>
+                <span class="functioning-step__text">Dégustez au restaurant</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Restaurants section -->
+      <section class="restaurants" id="restaurants">
+        <div class="wrapper">
+          <h2>Restaurants</h2>
+          <div class="restaurants-grid">
+            <!-- Restaurant card -->
+            <div class="restaurant-card">
+              <div class="restaurant-card__img">
+                <img src="./images/restaurants/la-palette-du-gout.jpg" alt="" />
+                <span>Nouveau</span>
+              </div>
+              <div class="restaurant-card__desc">
+                <div>
+                  <h3>La palette du goût</h3>
+                  <span>Ménilmontant</span>
+                </div>
+                <form action="#">
+                  <input id="heart-checkbox-1" type="checkbox" class="heart-checkbox" />
+                  <label for="heart-checkbox-1" class="heart-container">
+                    <object
+                      class="heart-inactive"
+                      data="./images/heart-svg-inactive.svg"
+                      type="image/svg+xml"
+                    ></object>
+                    <object
+                      class="heart-active"
+                      data="./images/heart-svg-active.svg"
+                      type="image/svg+xml"
+                    ></object>
+                  </label>
+                </form>
+              </div>
+              <a
+                href="./restaurant-la-palette-du-gout.html"
+                aria-label="Acceder au Restaurant La palette du gout"
+              ></a>
+            </div>
+
+            <div class="restaurant-card">
+              <div class="restaurant-card__img">
+                <img
+                  src="./images/restaurants/la-note-enchantée.jpg"
+                  alt=""
+                  class="img-align-center"
+                />
+                <span>Nouveau</span>
+              </div>
+              <div class="restaurant-card__desc">
+                <div>
+                  <h3>La note enchantée</h3>
+                  <span>Charonne</span>
+                </div>
+                <input id="heart-checkbox-2" type="checkbox" class="heart-checkbox" />
+                <label for="heart-checkbox-2" class="heart-container">
+                  <object
+                    class="heart-inactive"
+                    data="./images/heart-svg-inactive.svg"
+                    type="image/svg+xml"
+                  ></object>
+                  <object
+                    class="heart-active"
+                    data="./images/heart-svg-active.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </label>
+              </div>
+              <a
+                href="./restaurant-la-note-enchantee.html"
+                aria-label="Acceder au Restaurant La note enchantée"
+              ></a>
+            </div>
+
+            <div class="restaurant-card">
+              <div class="restaurant-card__img">
+                <img src="./images/restaurants/a-la-francaise.jpg" alt="" />
+              </div>
+              <div class="restaurant-card__desc">
+                <div>
+                  <h3>A la française</h3>
+                  <span>Cité Rouge</span>
+                </div>
+                <input id="heart-checkbox-3" type="checkbox" class="heart-checkbox" />
+                <label for="heart-checkbox-3" class="heart-container">
+                  <object
+                    class="heart-inactive"
+                    data="./images/heart-svg-inactive.svg"
+                    type="image/svg+xml"
+                  ></object>
+                  <object
+                    class="heart-active"
+                    data="./images/heart-svg-active.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </label>
+              </div>
+              <a
+                href="./restaurant-a-la-francaise.html"
+                aria-label="Acceder au Restaurant A la Française"
+              ></a>
+            </div>
+
+            <div class="restaurant-card">
+              <div class="restaurant-card__img">
+                <img src="./images/restaurants/le-delice-des-sens.jpg" alt="" />
+              </div>
+              <div class="restaurant-card__desc">
+                <div>
+                  <h3>Le délice des sens</h3>
+                  <span>Folie-Méricourt</span>
+                </div>
+                <input id="heart-checkbox-4" type="checkbox" class="heart-checkbox" />
+                <label for="heart-checkbox-4" class="heart-container">
+                  <object
+                    class="heart-inactive"
+                    data="./images/heart-svg-inactive.svg"
+                    type="image/svg+xml"
+                  ></object>
+                  <object
+                    class="heart-active"
+                    data="./images/heart-svg-active.svg"
+                    type="image/svg+xml"
+                  ></object>
+                </label>
+              </div>
+              <a
+                href="./restaurant-le-delice-des-sens.html"
+                aria-label="Acceder au Restaurant Le délice des sens"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <span class="footer__logo">ohmyfood</span>
+        <ul class="footer__list">
+          <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+          <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mailto:example@ohmyfood.com">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
